@@ -46,7 +46,7 @@ export const getServerSideProps: GetServerSideProps<PageProps, StaticParams> = a
 
   const [general, translations, navikronosStaticProps] = await Promise.all([
     generalFetcher(locale),
-    serverSideTranslations(locale, ['common']),
+    serverSideTranslations(locale),
     navikronosGetStaticProps({
       navikronosConfig,
       ctx,
