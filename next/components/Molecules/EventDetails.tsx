@@ -122,7 +122,7 @@ const EventDetails = ({ event }: PageProps) => {
               href="#detail_podujatia"
               className="h-12 w-full border border-border-dark bg-button-dark text-white hover:bg-button-hover"
             >
-              {t('eventReservation')}
+              {t('eventDetails.eventReservation')}
             </a>
           )}
         </div> */}
@@ -131,7 +131,7 @@ const EventDetails = ({ event }: PageProps) => {
       <div className="flex grid-cols-9 flex-col-reverse gap-x-16 pt-10 lg:grid">
         <div className="col-span-6">
           <div className="mt-8 border-b border-border-dark pb-10 lg:mt-0">
-            <div className="text-[24px]">{t('description')}</div>
+            <div className="text-[24px]">{t('eventDetails.description')}</div>
             <div className="pt-5">
               <RichText content={event?.attributes?.description ?? ''} />
             </div>
@@ -153,7 +153,7 @@ const EventDetails = ({ event }: PageProps) => {
           )}
           {(event?.attributes?.guests?.length || 0) > 0 && (
             <div className="border-b border-border-dark py-10">
-              <div className="text-[24px]">{t('eventGuests')}</div>
+              <div className="text-[24px]">{t('eventDetails.eventGuests')}</div>
               <div className="grid grid-cols-3 pt-5">
                 {event?.attributes?.guests?.map((guest) => (
                   <div key={guest?.id} className="flex pr-[24px]">
@@ -174,7 +174,7 @@ const EventDetails = ({ event }: PageProps) => {
           )}
           {/* {(eventDetails?.partners?.length || 0) > 0 && (
             <div className="border-b border-border-dark pb-10 pt-10">
-              <div className="text-[24px]">{t('eventPartners')}</div>
+              <div className="text-[24px]">{t('eventDetails.eventPartners')}</div>
               <div className="grid grid-cols-3 pt-5">
                 {eventDetails?.partners?.map((partner) => (
                   <div key={partner?.id} className="flex pr-[24px]">
@@ -194,7 +194,7 @@ const EventDetails = ({ event }: PageProps) => {
           <div className="pt-10">
             <div className="block h-auto border-y border-border-dark py-3 lg:flex lg:h-[70px] lg:border lg:p-0">
               {/* <div className="hidden lg:block pl-6 w-[169px] text-base m-auto"> */}
-              {/*  {t('eventShareAndSave')} */}
+              {/*  {t('eventDetails.eventShareAndSave')} */}
               {/* </div> */}
               {/* TODO add AddToCalendar functionality */}
               {/* {!isEventInThePast && ( */}
@@ -211,7 +211,7 @@ const EventDetails = ({ event }: PageProps) => {
               {/*    > */}
               {/*      <div className="flex text-sm uppercase"> */}
               {/*        <CalendarIcon className="h-5 w-5" /> */}
-              {/*        &nbsp; {t('eventAddToCalendar')} */}
+              {/*        &nbsp; {t('eventDetails.eventAddToCalendar')} */}
               {/*      </div> */}
               {/*    </AddToCalendar> */}
               {/*  </div> */}
@@ -221,20 +221,20 @@ const EventDetails = ({ event }: PageProps) => {
                 actionLink={copyToClipBoard}
                 classDiv="my-3 lg:m-auto"
                 svgIcon={<ShareIcon />}
-                text={t('eventShare')}
+                text={t('eventDetails.eventShare')}
                 copyText
               />
               <Clickable
                 actionLink={fireSwal}
                 classDiv="my-3 lg:m-auto"
                 svgIcon={<CameraIcon />}
-                text={t('eventQr')}
+                text={t('eventDetails.eventQr')}
               />
             </div>
           </div>
         </div>
         <div className="col-span-3 text-[24px]">
-          {t('details')}
+          {t('eventDetails.details')}
           <div className="pt-5">
             <div className="border-y border-border-dark text-base lg:border">
               <div className="m-5">
@@ -264,7 +264,7 @@ const EventDetails = ({ event }: PageProps) => {
                   {/*    > */}
                   {/*      <div className="flex text-sm uppercase"> */}
                   {/*        <CalendarIcon className="h5 w-5" /> */}
-                  {/*        &nbsp; {t('eventAddToCalendar')} */}
+                  {/*        &nbsp; {t('eventDetails.eventAddToCalendar')} */}
                   {/*      </div> */}
                   {/*    </AddToCalendar> */}
                   {/*  </div> */}
@@ -285,7 +285,7 @@ const EventDetails = ({ event }: PageProps) => {
                       actionLink={`https://www.google.com/maps/dir/?api=1&travelmode=driving&dir_action=navigate&destination=${eventBranch.address}`}
                       classDiv="pl-9 pt-3"
                       svgIcon={<NavigateIcon />}
-                      text={t('navigate')}
+                      text={t('eventDetails.navigate')}
                     />
                   )}
                 </div>
@@ -295,7 +295,7 @@ const EventDetails = ({ event }: PageProps) => {
                   svgIcon={<EuroIcon />}
                   text={
                     !event?.attributes?.price || event?.attributes?.price == 0
-                      ? t('noCharge').toString()
+                      ? t('eventDetails.noCharge').toString()
                       : event?.attributes?.price?.toString() || ''
                   }
                 />
