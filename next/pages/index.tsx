@@ -66,7 +66,7 @@ export const Index = ({
   general,
   promotedContent,
 }: HomeProps) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
 
   const mergedPromotedContent = [
     ...(promotedContent?.notices?.data ?? []),

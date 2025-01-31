@@ -21,7 +21,7 @@ import { useRoutePreservedState } from '@/utils/useRoutePreservedState'
 import { useSearch } from '../../hooks/useSearch'
 
 const DocumentsListingSection = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
   const { getPathForEntity } = useNavikronos()
 
   // TODO add scroll to results

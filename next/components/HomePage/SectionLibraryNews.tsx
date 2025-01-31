@@ -15,7 +15,7 @@ interface LibraryNewsProps {
 }
 
 const SectionLibraryNews = ({ notices, newsSection }: LibraryNewsProps) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
   const { getPathForStrapiEntity } = useNavikronos()
 
   return (

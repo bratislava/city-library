@@ -32,7 +32,7 @@ export interface PageProps {
 }
 
 const EventDetails = ({ event }: PageProps) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
   const { asPath } = useRouter()
   const [isEventInThePast, setIsEventInThePast] = React.useState(false)
 
