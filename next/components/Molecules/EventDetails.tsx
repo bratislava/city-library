@@ -73,7 +73,6 @@ const EventDetails = ({ event }: PageProps) => {
     url: Placeholder.src,
     width: Placeholder.width,
     height: Placeholder.height,
-    alternativeText: t('eventDetailImagePlaceholder'),
     ...event?.attributes?.coverImage?.data?.attributes,
   }
 
@@ -85,7 +84,7 @@ const EventDetails = ({ event }: PageProps) => {
         src={bannerProps.url}
         width={bannerProps.width || 0}
         height={bannerProps.height || 0}
-        alt={bannerProps.alternativeText || t('eventDetailImagePlaceholder')}
+        alt={bannerProps.alternativeText || ''}
         className="w-full object-cover object-center md:h-[300px] lg:h-[400px]"
       />
       <div className="block grid-cols-9 gap-x-16 pt-10 lg:grid">
