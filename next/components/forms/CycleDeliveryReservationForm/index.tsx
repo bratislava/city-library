@@ -19,7 +19,7 @@ import StepNumberTitle from '../StepNumberTitle'
 const CycleDeliveryReservationForm = () => {
   const [step, setStep] = React.useState(1)
   const [isSubmitted, setIsSubmitted] = React.useState(SubmitStatus.NONE)
-  const { t } = useTranslation(['forms', 'common'])
+  const { t } = useTranslation('forms')
   const router = useRouter()
 
   yup.setLocale({
@@ -156,7 +156,6 @@ const CycleDeliveryReservationForm = () => {
     <FormProvider {...methods}>
       <FormContainer
         title={t('cycle_delivery_reservation_title')}
-        buttonText={t('common:continue')}
         onSubmit={handleSubmit}
         isSubmitted={isSubmitted}
         onReset={() => setIsSubmitted(SubmitStatus.NONE)}
@@ -312,7 +311,7 @@ const CycleDeliveryReservationForm = () => {
               />
             </div>
 
-            <Button onPress={() => triggerFirstStep()}>{t('common:continue')}</Button>
+            <Button onPress={() => triggerFirstStep()}>{t('continue')}</Button>
           </div>
         </StepNumberTitle>
 

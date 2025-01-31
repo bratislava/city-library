@@ -14,7 +14,7 @@ import FormFooter from '../FormFooter'
 
 const AskLibraryForm = () => {
   const [isSubmitted, setIsSubmitted] = React.useState(SubmitStatus.NONE)
-  const { t } = useTranslation(['forms', 'common'])
+  const { t } = useTranslation('forms')
   const router = useRouter()
 
   yup.setLocale({
@@ -98,7 +98,6 @@ const AskLibraryForm = () => {
     <FormProvider {...methods}>
       <FormContainer
         title={t('ask_library_title')}
-        buttonText={t('common:continue')}
         onSubmit={handleSubmit}
         isSubmitted={isSubmitted}
         onReset={() => setIsSubmitted(SubmitStatus.NONE)}

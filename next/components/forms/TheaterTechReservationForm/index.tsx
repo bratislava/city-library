@@ -14,7 +14,7 @@ import FormFooter from '../FormFooter'
 
 const TheaterTechReservationForm = () => {
   const [isSubmitted, setIsSubmitted] = React.useState(SubmitStatus.NONE)
-  const { t } = useTranslation(['forms', 'common'])
+  const { t } = useTranslation('forms')
   const router = useRouter()
 
   yup.setLocale({
@@ -100,7 +100,6 @@ const TheaterTechReservationForm = () => {
     <FormProvider {...methods}>
       <FormContainer
         title={t('theater_tech_reservation_title')}
-        buttonText={t('common:continue')}
         onSubmit={handleSubmit}
         isSubmitted={isSubmitted}
         onReset={() => setIsSubmitted(SubmitStatus.NONE)}
